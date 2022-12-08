@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping
+@RequestMapping("/api/boat")
 public class BoatController {
 
     private final BoatService boatService;
@@ -19,8 +19,7 @@ public class BoatController {
     public BoatController(BoatService boatService) {
         this.boatService = boatService;
     }
-
-
+    
     @GetMapping
     public ResponseEntity<List<Boat>> getAll() {
         List<Boat> items = boatService.getAllBoats();

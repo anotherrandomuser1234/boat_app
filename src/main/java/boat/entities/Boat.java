@@ -11,6 +11,7 @@ import javax.persistence.Id;
 @Getter
 @ToString
 @EqualsAndHashCode
+@NoArgsConstructor
 public class Boat {
     private @Id @GeneratedValue Long id;
     private String name;
