@@ -33,3 +33,12 @@
   padding: 20px;
   margin-top: 30px;
 }
+
+.boatContainer {
+  width: 75%;
+  margin: auto;
+}
+
+.clickable {
+  cursor: pointer;
+}
