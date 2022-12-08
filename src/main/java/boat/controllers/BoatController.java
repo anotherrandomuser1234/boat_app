@@ -12,6 +12,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/boat")
+@CrossOrigin(maxAge = 3600)
 public class BoatController {
 
     private final BoatService boatService;
@@ -19,7 +20,7 @@ public class BoatController {
     public BoatController(BoatService boatService) {
         this.boatService = boatService;
     }
-    
+
     @GetMapping
     public ResponseEntity<List<Boat>> getAll() {
         List<Boat> items = boatService.getAllBoats();
