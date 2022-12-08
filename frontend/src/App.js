@@ -1,8 +1,7 @@
-import { Button, Input } from '@mui/material';
-import { useState } from 'react';
-import { Navigate, Route, Routes, useNavigate } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import BoatPage from './pages/BoatPage';
 import LoginPage from './pages/LoginPage';
+import BoatDetailPage from './pages/BoatDetailPage';
 
 function App() {
   const title = "Boat App";
@@ -12,6 +11,7 @@ function App() {
       <Routes>
         <Route path='/' element={< LoginPage />}></Route>
         <Route path='/boats' element={< BoatPage />}></Route>
+        <Route path='/boats/:id' element={< BoatDetailPage />}></Route>
       </Routes>
     </div>
   );

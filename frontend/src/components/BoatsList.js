@@ -63,7 +63,6 @@ export default function BoatsList(props) {
                         {items.map((boat) => (
                             <TableRow
                                 key={boat.id}
-                                sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                             >
                                 <TableCell> 
                                     <TextField error={name === ""} autoFocus margin="dense" id="name" type="text" variant="standard" defaultValue={boat.name} onChange={handleNameChange}/>
@@ -80,7 +79,6 @@ export default function BoatsList(props) {
                                 <TableCell>
                                     <Button variant="outlined" color="error" onClick={() => handleDelete(boat.id)}>Delete</Button>
                                 </TableCell>
-
                             </TableRow>
                         ))}
                     </TableBody>
