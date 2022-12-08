@@ -66,16 +66,16 @@ export default function BoatsList(props) {
                                 sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                             >
                                 <TableCell> 
-                                    <TextField autoFocus margin="dense" id="name" type="text" variant="standard" defaultValue={boat.name} onChange={handleNameChange}/>
+                                    <TextField error={name === ""} autoFocus margin="dense" id="name" type="text" variant="standard" defaultValue={boat.name} onChange={handleNameChange}/>
                                 </TableCell>
                                 <TableCell class="clickable">
-                                    <TextField autoFocus margin="dense" id="name" type="text" variant="standard" defaultValue={boat.description} onChange={handleDescriptionChange}/>
+                                    <TextField error={description === ""} autoFocus margin="dense" id="name" type="text" variant="standard" defaultValue={boat.description} onChange={handleDescriptionChange}/>
                                 </TableCell>
                                 <TableCell>
                                     <Button variant="outlined" color="primary" onClick={() => goToBoatDetailPage(boat.id)}>Show Details</Button>
                                 </TableCell>
                                 <TableCell>
-                                    <Button variant="outlined" color="primary" onClick={() => handleEdit(boat)}>Edit</Button>
+                                    <Button disabled={name === "" || description === ""} variant="outlined" color="primary" onClick={() => handleEdit(boat)}>Update</Button>
                                 </TableCell>
                                 <TableCell>
                                     <Button variant="outlined" color="error" onClick={() => handleDelete(boat.id)}>Delete</Button>
